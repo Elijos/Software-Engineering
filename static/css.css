@@ -1,0 +1,104 @@
+/*
+ * Author: Evan lucas-currie
+ */
+
+body{
+	font-family: "comic sans", "comic sans ms", sans-serif,Arial, Helvetica !important;
+    display:grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 10% 75% 15%;
+    grid-template-areas: 
+      "head head head"
+      "nav article aside"
+      "foot foot foot";
+}
+
+#header {
+    background-color:rgba(255, 255, 255, 0);
+    font-family: 'Times New Roman', serif;
+    font-size:xx-large;
+    text-align: center;
+    grid-area: head;
+    z-index: 1;
+}
+
+img {
+    max-width: 75%;
+    max-height: 100%;
+}
+
+#nav {
+    background-color: rgba(255, 255, 255, 0);
+    grid-area: nav;
+    min-height: 100%;
+}
+#aside {
+    background-color: rgba(255, 255, 255, 0);
+   grid-area: aside;
+   min-height: 100%;
+}
+ 
+#display{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(33, 37, 41, 0.603);
+    grid-area: article;
+    border: 1px solid black;
+    overflow: auto;
+    min-width:100%;
+    height: 700px;
+    min-height: 100%;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
+}
+
+#displayForm {
+    background-color:rgba(33, 37, 41, 0);
+    
+}
+
+#canvasContainer {
+    object-fit: contain;
+    overflow: auto;
+    z-index: 0;
+}
+
+#getImage {
+    outline: none !important;
+    box-shadow: none;
+}
+
+nav {
+    border:1px solid black;
+    background-color: rgba(33, 37, 41, 0.5) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#uploadBtn {
+    display:grid;
+    grid-area: foot;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(33, 37, 41, 0.603);
+    color:white;
+}
+
+.offcanvasContainer {
+    background-color: rgba(33, 37, 41, 0.600) !important;
+    backdrop-filter: blur(10px);
+    color:white;
+}
+
+#offcanvasHeader {
+    background-color:rgba(33, 37, 41, 0.600);
+}
+#submitBtn{
+    width:100%;
+}

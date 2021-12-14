@@ -1,0 +1,112 @@
+/* Styling the about us page. 
+   Author: Evan Lucas-Currie */
+
+/* Set up the specifications for the body of the page */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-image: url("./photos/backgroundAbout.webp"),
+    linear-gradient(-45deg, black, rgba(0, 0, 0, 0.959));
+  font-size: 20px;
+}
+
+/* Set total width and height of the entire page */
+html {
+  box-sizing: border-box;
+}
+
+/* Set up the total width and height before and after*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Make cards flexible */
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+}
+.column {
+  float: left;
+  width: 20%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Set design for cards */
+.card {
+  background-color: rgba(255, 255, 255, 0.575);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: 0 4px 8px 0 rgba(0, 0, 0, 0.39);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.39);
+  margin: 8px;
+  overflow-wrap: break-word;
+}
+
+/* Set the fade out in the at the top */
+.about-section {
+  background: linear-gradient(
+    hsl(0 0% 0% / 1),
+    hsl(20 0% 0% / 0.7) 70%,
+    hsl(0 0% 0% / 0)
+  );
+  padding: 10px 40px 65px 40px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+/* Padding for the cards */
+.container {
+  padding: 0 16px;
+}
+
+/* Set up table view */
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Set Title color */
+.title {
+  color: rgb(138, 36, 36);
+}
+
+/* Set the button design */
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  /* cursor becomes pointer when it's over a button */
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Show when someone hovers over buttons */
+.button:hover {
+  background-color: #555;
+}
+
+/* Change layout based on screen size */
+@media screen and (max-width: 1000px) {
+  .column {
+    width: 50%;
+    display: block;
+    position: left;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}

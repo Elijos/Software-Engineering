@@ -1,0 +1,99 @@
+{
+    "background": {
+      "color": {
+        "value": "#5a4cdf"
+      },
+      "image": "url('/background')",
+      "position": "-30% 110%",
+      "repeat": "repeat-y",
+      "size": "101%"
+    },
+    "fullScreen": {
+      "zIndex": -1
+    },
+    "interactivity": {
+      "events": {
+        "onClick": {
+          "enable": true,
+          "mode": "repulse"
+        },
+        "onHover": {
+          "mode": "grab"
+        }
+      },
+      "modes": {
+        "bubble": {
+          "distance": 400,
+          "duration": 2,
+          "opacity": 8,
+          "size": 40
+        },
+        "grab": {
+          "distance": 200
+        }
+      }
+    },
+    "particles": {
+      "color": {
+        "value": "#ffffff"
+      },
+      "links": {
+        "color": {
+          "value": "#ffffff"
+        },
+        "distance": 150,
+        "opacity": 0.4
+      },
+      "move": {
+        "attract": {
+          "rotate": {
+            "x": 600,
+            "y": 1200
+          }
+        },
+        "direction": "left",
+        "enable": true,
+        "path": {},
+        "outModes": {
+          "bottom": "out",
+          "left": "out",
+          "right": "out",
+          "top": "out"
+        },
+        "speed": 6,
+        "spin": {},
+        "straight": true
+      },
+      "opacity": {
+        "value": 0.5,
+        "animation": {
+          "speed": 1,
+          "minimumValue": 0.1
+        }
+      },
+      "shape": {
+        "options": {
+          "star": {
+            "sides": 5
+          },
+          "polygon": {
+            "sides": 5
+          }
+        },
+        "type": "star"
+      },
+      "size": {
+        "random": {
+          "enable": true
+        },
+        "value": {
+          "min": 1,
+          "max": 4
+        },
+        "animation": {
+          "speed": 40,
+          "minimumValue": 0.1
+        }
+      }
+    }
+  }

@@ -1,0 +1,323 @@
+/* Authors Ben Boekema and Evan Smith */
+
+/* Body css */
+body {
+        
+        height:70vh;
+	font-family: "comic sans", "comic sans ms", sans-serif,Arial, Helvetica !important;
+	font-size: 20px;
+}
+
+/* footer css */
+footer{
+	display: fixed;
+	bottom:0px;
+	color: white;
+	background-color: #333
+
+}
+/* paragraph tag css */  
+p {
+	color: white;
+	text-align : center
+}
+  
+
+/* overlay css */
+@media screen and (max-height: 450px){
+	.overlay a {
+		font-size: 20px
+}
+	.overlay .closebtn {
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+	}
+}
+
+@keyframes popout {
+	0%{
+		background-color: rgba(0, 0, 0, 0.26);
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                transform: scale(1);
+	}
+	100%{
+                transform: scale(1.1);
+		background-color: rgba(0, 0, 0, 0.80);
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.60), 0 6px 20px 0 rgba(0, 0, 0, 0.60);
+
+	}
+	
+}
+
+/*
+	Classes
+*/
+
+/* The Overlay (background) */
+.overlay {
+	/* Height & width depends on how you want to reveal the overlay (see JS below) */   
+	height: 100%;
+	width: 0;
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	background-color: rgb(0,0,0); /* Black fallback color */
+	background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+	overflow-x: hidden; /* Disable horizontal scroll */
+	transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+  
+  /* Position the content inside the overlay */
+.overlay-content {
+	position: relative;
+	top: 25%; /* 25% from the top */
+	width: 100%; /* 100% width */
+	text-align: center; /* Centered text/links */
+	margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+  
+  /* The navigation links inside the overlay */
+.overlay a {
+	padding: 8px;
+	text-decoration: none;
+	font-size: 36px;
+	color: #818181;
+	display: block; /* Display block instead of inline */
+	transition: 0.3s; /* Transition effects on hover (color) */
+}
+  
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+	color: #f1f1f1;
+}
+  
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 60px;
+}
+/* keeps all cards in a maximum height and fits them to screen */
+.section {
+	min-height:200%;
+	object-fit: contain;	
+}
+/* navbar color and blur effect */
+.navbar {
+	background-color: rgba(0, 0, 0, 0.5) !important;
+	backdrop-filter: blur(10px);
+}
+/* card text color */
+.card-text {
+	color: white;
+}
+/*display everything in the card and change text color to white*/
+.cardbody {
+	display: inline-block;
+	color:white;
+        height: auto;
+}
+/*background of the header in the card*/
+.card-header{
+	background-color: rgba(255, 255, 255, 0.09);
+}
+/* css for glass look of the cards */
+.glass-panel {
+    color: white;
+    margin: 40px auto;
+    background-color: rgba(0, 0, 0, 0.26);
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    width: 100%;
+    border-radius: 15px;
+    padding: 32px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow-wrap: break-word;
+    max-height: auto;
+}
+/*event that causes cards to pop out on hover*/
+.glass-panel:hover{
+	animation: popout 0.5s linear 0s 1 normal forwards;
+}
+/* css for the button in the card */
+.frostedGlassBtn {
+	color: white;
+	background-color: rgba(0, 0, 0, 0.151);
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid white;
+	text-decoration: none;
+}
+/*change text color to white upon hovering */
+.frostedGlassBtn:hover {
+	color: white;
+}
+/* click effect on btn in card */
+.frostedGlassBtn:active{
+	
+  -webkit-box-shadow: inset 0px 0px 5px #ffffff;
+     -moz-box-shadow: inset 0px 0px 5px #ffffff;
+          box-shadow: inset 0px 0px 5px #ffffff;
+   outline: none;
+}
+/*color of the chat window and background blur with text color white*/
+.offcanvasContainer {
+    background-color: rgba(33, 37, 41, 0.600) !important;
+    backdrop-filter: blur(10px);
+    color:white;
+}
+/*All font within the body of the chatwindow is comic sans*/
+.offcanvas-body{
+    font-family: "Comic Sans MS", "Comic Sans", Arial;
+
+}
+/* aligns the you text to the right in chat window*/
+.you{
+	text-align : right;
+}
+/*css for select menu in chat window */
+.form-select{
+	background-color: grey;
+    font-family: "Comic Sans MS", "Comic Sans", Arial;
+	color: white;
+}
+
+/*
+ * Ids
+ */
+
+/*make the display form that holds the select menu in the chat window appear on the bottom and scale its size*/
+#displayForm {   
+    position:fixed;
+    object-fit: contain;
+    bottom: 0;
+    width: 90%;
+    padding-left: 1%;
+}
+/*create the format of how the cards are aligned on the screen*/
+/*size changes based on the max width and height of the screen*/
+#cardContainer {
+    z-index: 1;
+    display:grid;
+    grid-template-columns: 45% 10% 45%;
+    grid-template-rows: 33% 33% 50%;
+    grid-template-areas: 
+      "head head head"
+      "card1 spacing card2"
+      "footer footer footer";
+
+    font-family: "Comic Sans MS", "Comic Sans", sans-serif, Arial !important;
+    object-fit: contain;
+	width:80%;
+    height: 100%;
+    grid-gap: 50px;
+	text-align: center;
+	vertical-align: middle;
+	margin-left: 7%;
+	
+}
+@media only screen and (max-width: 900px) {
+	#cardContainer {
+		z-index: 1;
+		display:grid;
+		grid-template-columns: 90%;
+		grid-template-rows:20% 20% 20% 20%;
+		grid-template-areas: 
+		  "head"
+		  "card1"
+		  "card2"
+		  "footer";
+	
+		font-family: "Comic Sans MS", "Comic Sans", sans-serif, Arial !important;
+		object-fit: contain;
+		min-width:90% !important;
+		min-height: 100% !important;
+		grid-gap: 50px;
+		text-align: center;
+		vertical-align: middle;
+		margin-left: 9%;
+	}
+	
+}
+
+
+@media only screen and (max-height: 800px) {
+	#cardContainer {
+		z-index: 1;
+		display:grid;
+		grid-template-columns: 90%;
+		grid-template-rows:400px 400px 400px 400px;
+		grid-template-areas: 
+		  "head"
+		  "card1"
+		  "card2"
+		  "footer";
+	
+		font-family: "Comic Sans MS", "Comic Sans", sans-serif, Arial !important;
+		object-fit: contain;
+		width:90%;
+		height: 100%;
+		grid-gap: 50px;
+		text-align: center;
+		vertical-align: middle;
+		margin-left: 9%;
+	}
+	
+}
+/*Kwe card*/
+#cardHead {
+    grid-area: head; 
+    height: 100%;
+    width: 100%;
+}
+
+/*Wtewistoq card*/
+#cardFooter {
+	display: flex;
+	flex-direction:column;
+    grid-area: footer; 
+    height: 100%;
+    width: 100%;
+	overflow: hidden;
+}
+/*Koqowey card*/
+#card1 {
+    grid-area: card1;
+    height: 100%;
+    width: 100%;
+}
+/*Taluisin card*/
+#card2 {
+    grid-area: card2;
+    height:100%;
+    width: 100%;
+}
+/*card spacing*/
+#spacing {
+    grid-area: spacing;
+    height: 100%;
+    width: 100%;
+}
+/* smu logo */
+#logo {
+	max-height: 30px;
+	margin-left: 3px;
+}
+/*Header in the chat window*/
+#offcanvasHeader {
+    background-color:rgba(33, 37, 41, 0.600);
+	font-family: "Comic Sans MS", "Comic Sans", Arial;
+}
+/* transparent btn*/
+button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: white;
+}

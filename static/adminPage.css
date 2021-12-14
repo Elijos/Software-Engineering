@@ -1,0 +1,11 @@
+a {
+    color: mediumblue;
+}
+
+a:visited {
+    color: mediumblue;
+}
+
+a:hover {
+    color: firebrick;
+}
