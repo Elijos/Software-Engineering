@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  href="../static/admin.css">
+</head>
+
+<body>
+    <div id="loginButton">
+        <img src="../static/photos/login-w-icon.png">
+        </img>
+    </div>
+    <div id="container">
+        <h1>Log In</h1>
+        <span class="closeBtn">
+            <img src="../static/photos/661783.png"></img>
+        </span>
+
+        <form id="loginForm">
+            <input type="text" name="username" id="username" placeholder="Username">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <a href="#" id="loginBtn">Log in</a>
+            <p id="errorLogin" style="color: red; text-align: center;" hidden>Invalid Credentials </p>
+            <div id="remember-container">
+
+                <span id="forgotten">Forget/Create password</span>
+            </div>
+        </form>
+    </div>
+
+    <!-- Forgotten Password Container -->
+    <div id="forgotten-container">
+        <h1>Forgotten</h1>
+        <span class="closeBtn">
+            <img src="../static/photos/661783.png"></img>
+        </span>
+
+        <form id="forgottenForm">
+            <input type="text" name="username" id="usernameReset" placeholder="Username">
+            <input type="password" name="password" id="passwordReset" placeholder="Password">
+            <input type="password" name="confirmPassword" id="confirmPasswordReset" placeholder="Confirm Password">
+            <input type="password" name="secret" id="secret" placeholder="Recovery Password">
+            <p style="color:darkslategrey; text-align: center;">Write down your usename and Recovery Password<br>You
+                will not be able to reset it </p>
+            <p id="error" style="color:red; text-align: center;" hidden>All areas must be populated and password and
+                confirm password must match</p>
+            <a href="#" class="forgetBtn">Get new password</a>
+        </form>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+<script src="../static/admin.js"></script>
+
+</html>

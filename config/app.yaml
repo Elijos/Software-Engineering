@@ -1,0 +1,86 @@
+hydra:
+  output_subdir: null
+  run:
+    dir: 'log'
+
+routes:
+  html:
+    index: "/"
+    objectDectection: "/object"
+    guessWhat: "/guess"
+    chat: "/chat"
+    aboutUs: "/about"
+  predictions:
+    chatBot: "/bot"
+    objectPrediction: "/predict"
+  tensorflow:
+    model: "/model.json"
+    metaData: "/metadata.json"
+    shard1: "/group1-shard1of2.bin"
+    shard2: "/group1-shard2of2.bin"
+  particles:
+    mainScreen: "/particles.json"
+    objectDetection: "/particles2.json"
+    aboutPage: "/particles3.json"
+  image:
+    neoncat: "/background"
+    aboutImg: "/aboutImg"
+  styles:
+    - "/style"
+    - "/guessWhat"
+  admin:
+    submit: "/submit/<id>"
+    ID: "/admin/<id>"
+    adminLogin: "/admin"
+    reset: "/adminReset"
+    login: "/adminLogin"
+  scoreboard:
+    html: "/score"
+    get: "/getScoreBoard"
+    submit: "/submitdata"
+
+model:
+  modelLocation: "objModel.pt"
+  dir: "./"
+  modelType: "custom"
+  device: "cpu"
+  inferenceSize: 640
+
+host:
+  ip: "0.0.0.0"
+  port: 7000
+
+guessWhat:
+  - "style.css"
+  - "guessWhat.js"
+
+
+htmlFile:
+  homeScreen: "index.html"
+  guessWhat: "guessWhat.html"
+  chatBot: "chatWindow.html"
+  objectDetection: "object.html"
+  aboutUs: "about.html"
+  admin: "admin.html"
+  adminSignin: "signin.html"
+  adminLoggedIn: "adminpage.html"
+  scoreboard: "scoreboard.html"
+
+tensorflow:
+  model: "model.json"
+  metaData: "metadata.json"
+  shard1: "group1-shard1of2.bin"
+  shard2: "group1-shard2of2.bin"
+
+particles:
+    - "particles.json"
+    - "particles2.json"
+    - "particles3.json"  
+
+images:
+  neonCat: "./photos/neoncat.gif"
+  aboutImg: "./photos/bg.png"
+
+staticFileLocation: "static"
+
+audioFileLocation: "./static/audio"

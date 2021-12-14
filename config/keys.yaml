@@ -1,0 +1,9 @@
+hydra:
+  output_subdir: null
+  run:
+    dir: 'log'
+
+keys:
+  - "./k1.txt"
+  - "./k2.txt"
+  - "./k3.txt"

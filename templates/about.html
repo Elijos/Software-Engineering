@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+</head>
+<body>
+<div class="about-section">
+    <h1>About Us</h1>
+    <p>Our goals with this project was to allow Mi'kmaq people the ability
+      to experience some of the benefits of artificial intelligence to help
+      facilitate the learning of their language. The sad truth is the expansion
+      of technology has been a major culprit in the steady decline of Mi'kmaq speakers.
+      This was painfully obvious when we went to look for resources on the subject. Our hope
+      is that this may serve as a tool to aid the learning process and show what technology has to offer.
+
+    </p>
+  </div>
+  
+  <h2 style="text-align:center">Our Team</h2>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="../static/photos/Evan.jpg" alt="Evan Lucas-Currie" style="width:100%">
+        <div class="container">
+          <h2>Evan Lucas-Currie</h2>
+          <p class="title">Project Lead</p>
+          <p>As project lead my main goal was to use A.I, the focus was not necessary to create models ourselves but to use preexisting architectures with top-of-the-line performance. 
+            I mostly focused on the object detection (frontend/backend), server-side, about us page, and main screen css work. 
+            I would have liked to fully realize this project. Unfortunately, due to our limited dataset we were not able to do everything we would have liked to. 
+            If you have any questions regarding this project, feel free to email me I would be glad to offer any help I can. 
+          </p>
+          <p>Evan.lucascurrie@gmail.com</p>
+          <p> <a href="mailto:evan.lucascurrie@gmail.com" target="_blank"><button class="button">Contact</button></a></p>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <img src="../static/photos/Demilade.jpg" alt="Muiz" style="width:100%">
+        <div class="container">
+          <h2>Muiz Demilade Adebayo</h2>
+          <p class="title">Developer</p>
+          <p>I’m a Computer Science major who enjoys research, learning new things and psychology. 
+            I’m glad that I was able to collaborate with my team mates in building an app to promote the Mik’maq language 
+            and also make learning the language interesting especially with aspects like the object detection. 
+            With this app, we hope to have an impact on the children’s learning of the Mik’maq language in a fun way.</p>
+          <p>adebayomuiz@yahoo.com</p>
+          <p> <a href="mailto:adebayomuiz@yahoo.com" target="_blank"><button class="button">Contact</button></a></p>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <img src="../static/photos/Emmanuel.jpg" alt="Emmanuel" style="width:100%" >
+        <div class="container">
+          <h2>Emmanuel Simiyu</h2>
+          <p class="title">Developer</p>
+          <p>I am a third-year Computer Science Major at Saint Mary’s University, with an interest in Philosophy. 
+            This project has been a unique learning experience, a chance to work with clients to realize a functional program, 
+            as well as an insight into the Mi’kmaq culture. My part in the project was mainly focused on the Guess What game, 
+            its structure, aesthetics, and some functional aspects. I am excited to have had this chance to be part of a group with wide-ranging skills, 
+            and the chance to grow as a programmer. </p>
+          <p>Emmanuel.Simiyu@smu.ca</p>
+          <p><a href="mailto:Emmanuel.Simiyu@smu.ca" target="_blank"><button class="button">Contact</button></a></p>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <img src="../static/photos/Ben.jpg" alt="ben" style="width:100%" >
+        <div class="container">
+          <h2>Ben Boekema</h2>
+          <p class="title">Developer</p>
+          <p>I am currently a fourth year university student at Saint Mary’s University. 
+            My contribution to this project is creating a main page, implementing a chat function to the main screen and working on the css for those respective features. 
+            If you need to get in contact with me my email below.</p>
+          <p>benboekema@gmail.com</p>
+          <p><a href="mailto:benboekema@gmail.com" target="_blank"><button class="button">Contact</button></a></p>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h2>Srna Bojchin</h2>
+          <p class="title">Developer</p>
+          <p>I have been studying computer science at Saint Mary's University for 3 years now. 
+            I am interested in linguistics as well, so I was very excited to hear about this project which promotes the learning of the mi'kmaq language.
+            It has been a great learning experience as I got to not only work with a machine learning program, but also got to learn a bit about another language and culture.
+          </p>
+          <p>srnabojchin@gmail.com</p>
+          <p><a href="mailto:srnabojchin@gmail.com" target="_blank"><button class="button">Contact</button></a></p>
+        </div>
+      </div>
+    </div>
+        
+  </div>
+  <div id="tsparticles"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.37.4/tsparticles.min.js" integrity="sha512-l8hS6UPP479YHIF0/PDp6s/62mLFM/fPM9wYjrJaEcYc4YIAOxI8AnrLhBOfCd+UwQmqEWHCiccmOHhu4d7SBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-particles"></script>
+<script src="{{url_for('static', filename='about.js') }}"></script>
+</body>
+</html>

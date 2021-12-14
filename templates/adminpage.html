@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <link rel="stylesheet" href="../static/adminPage.css">
+</head>
+
+<body>
+    <p>Current List of all Audio Files, Submit is at the bottom of the page</p>
+    <form id="form">
+        <ul>
+            {% for audio in audioFiles: %}
+            <li>{{ audio }} <br> <a href="#" onclick='play("{{ audio }}")'>Play Audio</a><br><input class="inputFile" type="file" name="{{ audio }}" accept=".mp3"> {% endfor %}
+            </li>
+        </ul>
+        <a href="#" id="submit">Submit changes</a>
+    </form>
+    <div id="aside" hidden></div>
+    <div id="getUrl" hidden>{{ submitDataUrl }}</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../static/adminpage.js"></script>
+
+
+</html>

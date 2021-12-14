@@ -1,0 +1,70 @@
+<!--Author: Evan Lucas-Currie -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body onload="deviceWidth()">
+        <div id="header"><nav class="navbar navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Koqowey</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="/">Ni’k</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="https://ugdev.cs.smu.ca/~group12/guessWhat.html">Taluisin?</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          </nav></div>
+        <div id="nav"></div>
+
+        <div id="display">
+            <div id="canvasContainer">
+            </div>
+        </div>
+
+        <div id="aside">
+        </div>
+        
+        <div class="offcanvas offcanvas-start offcanvasContainer" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header" id="offcanvasHeader">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Upload Image</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+              <div id="displayForm">
+              <iframe name="dummyframe" id="dummyframe" style="display: none;">
+              </iframe>
+              <form  id="myForm" name="myForm" enctype='multipart/form-data' encoding='multipart/form-data' target="dummyframe">
+                  <input type="file" class="form-control" id="getImage" name="image" accept="image/png, image/jpg" required>
+                  <input class="btn btn-dark" id="submitBtn"type="submit" onclick="send()" value="Submit" data-bs-dismiss="offcanvas">
+              </form>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn" id="uploadBtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            Upload
+          </button>
+          <div id="tsparticles"></div>
+        
+        <script src="{{ url_for('static', filename='fabric.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.37.4/tsparticles.min.js" integrity="sha512-l8hS6UPP479YHIF0/PDp6s/62mLFM/fPM9wYjrJaEcYc4YIAOxI8AnrLhBOfCd+UwQmqEWHCiccmOHhu4d7SBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-particles"></script>
+        <script src="{{ url_for('static', filename='index.js') }}"></script>
+
+        
+    </body>
+</html>

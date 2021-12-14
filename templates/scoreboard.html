@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Scoreboard.html-->
+<!-- Author: Muiz Demilade Adebayo-->
+<!-- Group 2 -->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Score Board using HTML CSS and Javascript</title>
+	<link rel="stylesheet" href="../static/scoreboard.css">
+</head>
+<body onload = "scoreBoard()">
+	
+	<!-- Wrapper class to center content on the webpage-->
+<div class="wrapper">
+       
+	<!--The scoreboard class and tabs -->
+	<div class="lboard_section">
+		<div class="lboard_tabs">
+			<div class="tabs">
+				<ul>
+					<li class="active" data-li="All time">All Time</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="lboard_wrap">
+			<div class="lboard_item month" style="display: block;" id= "replace">
+			</div>
+		</div>
+	</div>
+</div>	
+<!--Query to load scoreboard data gotten from the backend and guesswhat onto the scoreboard.html page-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+<script src="../static/scoreboard.js" ></script>
+</body>
+</html>

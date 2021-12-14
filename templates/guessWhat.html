@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://ugdev.cs.smu.ca/~group12/guessWhat.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Required meta tags -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <link rel="stylesheet" href="./guessWhat_files/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./guessWhat_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Software Project</title>
+  </head>
+  <body>
+    <div id="wrap" class="wrapper">
+      <!--Header container-->
+      <header id="headerContainer">
+        <div class="headerLeft">
+          <input type="checkbox" id="nav-toggle" class="nav-toggle">
+          <nav>
+            <ul>
+              <li><a href="http://ugdev.cs.smu.ca:7000/">Ni'k</a></li>
+              <li>
+                <a href="http://ugdev.cs.smu.ca:7000/score">Score chart</a>
+              </li>
+            </ul>
+          </nav>
+          <label for="nav-toggle" class="nav-togglelabel">
+            <span></span>
+          </label>
+        </div>
+        <div class="headerRight">
+          <div id="headerMid">
+            <h5>PICTURE PUZZLE</h5>
+            <h6>A Mi'kmaq experience</h6>
+          </div>
+          <div id="headerRightside">
+            <p id="timer">45</p>
+          </div>
+        </div>
+      </header>
+
+      <div id="myProgress">
+        <div id="myBar" style="width: 100%; background-color: rgb(0, 177, 0);"></div>
+      </div>
+
+      <!--Body container-->
+      <div class="bodywrap">
+        <!--image container-->
+        <div class="imagewrap">
+          <div id="imageBox" class="">
+            <img id="image" src="./guessWhat_files/kutputi.jpg">
+          </div>
+          <p id="about" style="display: none;">
+            Learning Mi'kmaq is fun.<br>This game is designed to prove that.
+            <br>Be sure to use the hints if<br>you get stuck.<br>
+            GOOD LUCK!
+          </p>
+          <div id="queBox" class="hide">
+            <h2>TRY AGAIN ?</h2>
+            <br>
+            <button id="yessir">Yes</button>
+            <button id="nosir">No</button>
+          </div>
+          <div id="form" class="hide">
+            <h2>Details</h2>
+            <input type="text" id="user" placeholder="name" required=""><br>
+            <input type="date" id="day" placeholder="date" required=""><br>
+            <button id="submit">SUBMIT</button>
+          </div>
+        </div>
+        <!--Answer container-->
+        <div class="answerWrap">
+          <div class="answerBox">
+            <div class="controls">
+              <button id="start-btn" class="start-btn btn" onclick="startGame()" style="display: none;">
+                Play
+              </button>
+              <label for="score" id="scorelbl" style="display: inline-block;"> Score:</label>
+              <p id="score" class="hide" style="display: block;">0</p>
+            </div>
+            <div class="subBox">
+              <input type="text" value="" id="text1" style="display: none;">
+              <br>
+              <button id="submission" class="hide">SUBMIT</button>
+              <button id="nexter" class="hide">&gt;</button>
+            </div>
+          </div>
+          <div class="buttons">
+            <button type="button" id="micBtn" class="btn btn-info" onclick="micTimer()" style="display: flex;">
+              Speak
+            </button>
+            <button type="button" id="keyBtn" class="btn btn-info" onclick="textTimer()" style="display: flex;">
+              Text
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--footer container-->
+      <footer>
+        <button type="button" id="hinter" class="btn btn-danger" onclick="" style="display: flex;">
+          Hint
+        </button>
+        <button type="button" id="next" class="btn btn-success" onclick="nextPic()" style="display: flex;">
+          &gt;&gt;
+        </button>
+      </footer>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="./guessWhat_files/jquery.min.js.download"></script>
+      <script src="./guessWhat_files/popper.min.js.download" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="./guessWhat_files/bootstrap.min.js.download" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="./guessWhat_files/tfjs"></script>
+      <script src="./guessWhat_files/speech-commands"></script>
+      <script src="./guessWhat_files/guessWhat.js.download"></script>
+    </div>
+  
+
+</body></html>
