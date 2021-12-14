@@ -40,7 +40,7 @@ routes:
     submit: "/submitdata"
 
 model:
-  modelLocation: "objModel.pt"
+  modelLocation: "yolov5s6.pt"
   dir: "./"
   modelType: "custom"
   device: "cpu"
