@@ -1,0 +1,5 @@
+Evan - Python (All backend besides scoreboard), Javascript (Object Detection)
+Srna - Python (scoreboard) , Javascript (main page)
+Ben - Python (scooreboard), JavaScript (main page)
+Demilade - JavaScript (scorebaord)
+Emmanuel - Javascript (guess what)
